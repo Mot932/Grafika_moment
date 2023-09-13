@@ -1,5 +1,14 @@
 import tkinter as tk
 from tkinter import filedialog
+import re
+import pymorphy3
+import collections
+from wordcloud import WordCloud
+from PIL import Image
+
+class TextAnalyser:
+    def __init__(self, file_name=None, pos_list=['VERB', 'NOUN']) -> None:
+        # Код TextAnalyser остается без изменений
 
 class TextAnalyserGUI:
     def __init__(self, root):
@@ -47,5 +56,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = TextAnalyserGUI(root)
     root.mainloop()
-
-              
